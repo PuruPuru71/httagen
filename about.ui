@@ -62,12 +62,15 @@
     <rect>
      <x>10</x>
      <y>120</y>
-     <width>301</width>
+     <width>231</width>
      <height>18</height>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Repository Link: no link because internal project&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Repository Link: &lt;a href=&quot;https://github.com/PuruPuru71/httagen&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#27bf73;&quot;&gt;PuruPuru71/httagen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="openExternalLinks">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="closeBtn">
