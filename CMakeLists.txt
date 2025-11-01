@@ -17,6 +17,9 @@ set(PROJECT_SOURCES
         httagen.cpp
         httagen.h
         httagen.ui
+        about.cpp
+        about.h
+        about.ui
         base64.hpp
 )
 
