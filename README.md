@@ -1,7 +1,7 @@
 # HTTP Authorization Token Generator (HTTAGEN)
 
 ## How to Compile
-1. Install [Qt](https://www.qt.io/) 5.15.7 according to your distribution instructions.
+1. Install [Qt](https://www.qt.io/) 5.15.17 according to your distribution instructions.
 2. Install [CMake](https://cmake.org/) according to your distribution instructions.
 3. Create a directory called "build" inside the cloned source code.
 4. Go into the newly created "build" directory using a Terminal
