@@ -1,7 +1,7 @@
 # Build Instructions - Linux
 
 ## Prerequisites
-1. Install [Qt](https://www.qt.io/) 5.15.17 according to your distribution instructions.
+1. Install [Qt](https://www.qt.io/) 6.10.0 according to your distribution instructions.
 2. Install [CMake](https://cmake.org/) according to your distribution instructions.
 3. Install [ninja](https://ninja-build.org/) according to your distribution instructions.
 
