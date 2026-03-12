@@ -1,5 +1,7 @@
 # HTTP Authorization Token Generator (HTTAGEN)
 
+# If you prefer flatpaks check out [this repository.](https://github.com/PuruPuru71/httagen-flatpak)
+
 ## Compiling instructions
 1. [Linux](https://github.com/PuruPuru71/httagen/blob/v2/Instructions/Linux.md)
 2. [Windows](https://github.com/PuruPuru71/httagen/blob/v2/Instructions/Windows.md)
