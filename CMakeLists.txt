@@ -21,6 +21,9 @@ set(PROJECT_SOURCES
         about.h
         about.ui
         base64.hpp
+        decode.cpp
+        decode.h
+        decode.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
