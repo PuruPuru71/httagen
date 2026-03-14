@@ -1,25 +1,25 @@
-#include "httagen.h"
-#include "./ui_httagen.h"
+#include "encode.h"
+#include "./ui_encode.h"
 #include "base64.hpp"
 #include <QString>
 #include "about.h"
 using namespace std;
 
-httagen::httagen(QWidget *parent)
+encode::encode(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::httagen)
+    , ui(new Ui::encode)
 {
     ui->setupUi(this);
 }
 
 string user, pwd, b64s, encstr, encstr2;
 
-httagen::~httagen()
+encode::~encode()
 {
     delete ui;
 }
 
-void httagen::on_genBtn_clicked()
+void encode::on_genBtn_clicked()
 {
     user = ui->usernameField->text().toStdString();
     pwd = ui->passwordField->text().toStdString();
@@ -35,7 +35,7 @@ void httagen::on_genBtn_clicked()
     }
 
 
-void httagen::on_aboutBtn_clicked()
+void encode::on_aboutBtn_clicked()
 {
     about *at = new about();
     at->show();

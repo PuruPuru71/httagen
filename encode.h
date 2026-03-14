@@ -1,21 +1,21 @@
-#ifndef HTTAGEN_H
-#define HTTAGEN_H
+#ifndef ENCODE_H
+#define ENCODE_H
 
 #include <QDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class httagen;
+class encode;
 }
 QT_END_NAMESPACE
 
-class httagen : public QDialog
+class encode : public QDialog
 {
     Q_OBJECT
 
 public:
-    httagen(QWidget *parent = nullptr);
-    ~httagen();
+    encode(QWidget *parent = nullptr);
+    ~encode();
 
 private slots:
 
@@ -24,6 +24,6 @@ private slots:
     void on_aboutBtn_clicked();
 
 private:
-    Ui::httagen *ui;
+    Ui::encode *ui;
 };
-#endif // HTTAGEN_H
+#endif // ENCODE_H

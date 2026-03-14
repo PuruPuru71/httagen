@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(httagen-gui VERSION 0.1 LANGUAGES CXX)
+project(httagen VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -14,9 +14,9 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        httagen.cpp
-        httagen.h
-        httagen.ui
+        encode.cpp
+        encode.h
+        encode.ui
         about.cpp
         about.h
         about.ui
@@ -24,9 +24,12 @@ set(PROJECT_SOURCES
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(httagen-gui
+    qt_add_executable(httagen
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        selectdialog.h selectdialog.cpp selectdialog.ui
+        decode.h decode.cpp decode.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET httagen-gui APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -34,13 +37,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(httagen-gui SHARED
+        add_library(httagen SHARED
             ${PROJECT_SOURCES}
         )
 # Define properties for Android with Qt 5 after find_package() calls as:
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(httagen-gui
+        add_executable(httagen
             ${PROJECT_SOURCES}
             about.h about.cpp about.ui
 
@@ -49,7 +52,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(httagen-gui PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(httagen PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -57,7 +60,7 @@ target_link_libraries(httagen-gui PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.httagen-gui)
 endif()
-set_target_properties(httagen-gui PROPERTIES
+set_target_properties(httagen PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -66,12 +69,12 @@ set_target_properties(httagen-gui PROPERTIES
 )
 
 include(GNUInstallDirs)
-install(TARGETS httagen-gui
+install(TARGETS httagen
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(httagen-gui)
+    qt_finalize_executable(httagen)
 endif()
