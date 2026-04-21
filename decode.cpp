@@ -32,12 +32,19 @@ void decode::on_decodeBtn_clicked()
     else {
         // There has to be a better way to do this...
         int split_userpwd = hashstrdec.find_first_of(':');
+        string split_userpwd_str = to_string(split_userpwd);
         string user = hashstrdec.substr(0, split_userpwd);
         string pwd = hashstrdec.substr(split_userpwd+1);
-        QString user_qstr = QString::fromStdString(user);
-        QString pwd_qstr = QString::fromStdString(pwd);
-        ui->usernameField->setText(user_qstr);
-        ui->passwordField->setText(pwd_qstr);
+        if (split_userpwd != std::string::npos ) {
+            QString user_qstr = QString::fromStdString(user);
+            QString pwd_qstr = QString::fromStdString(pwd);
+            ui->usernameField->setText(user_qstr);
+            ui->passwordField->setText(pwd_qstr);
+        }
+        else {
+            ui->usernameField->setText("");
+            ui->passwordField->setText("");
+        }
     }
     }
     catch (std::runtime_error& e) {
