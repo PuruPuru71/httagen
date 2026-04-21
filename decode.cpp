@@ -2,9 +2,7 @@
 #include "ui_decode.h"
 #include "base64.hpp"
 #include "about.h"
-#include <sstream>
 #include <string>
-#include <vector>
 using namespace std;
 
 decode::decode(QWidget *parent)
@@ -27,8 +25,6 @@ void decode::on_decodeBtn_clicked()
     try {
     hashstr = ui->hashField->text().toStdString();
     hashstrdec = base64::from_base64(hashstr);
-    stringstream hash_ss(hashstrdec);
-    vector<string> v;
     if (hashstr == "") {
         ui->usernameField->setText("");
         ui->passwordField->setText("");
