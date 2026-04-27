@@ -22,12 +22,14 @@ bool cmdOptionExists(char** begin, char** end, const std::string& option)
 int main(int argc, char *argv[])
 {
     if(cmdOptionExists(argv, argv+argc, "--wip-gui-refresh")) {
+        QApplication::setStyle("fusion");
         QApplication a_gr(argc,argv);
         httagen w_gr;
         w_gr.show();
         return a_gr.exec();
     }
     else {
+    QApplication::setStyle("fusion");
     QApplication a(argc, argv);
     selectdialog w;
     w.show();
