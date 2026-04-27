@@ -25,6 +25,12 @@
   <property name="windowTitle">
    <string>HTTAGEN - About</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+color: #FFFFFF;
+background-color: #333333;
+}</string>
+  </property>
   <widget class="QLabel" name="aboutLabel">
    <property name="geometry">
     <rect>

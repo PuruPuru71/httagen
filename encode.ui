@@ -25,6 +25,16 @@
   <property name="windowTitle">
    <string>HTTAGEN - Encode</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+color: #FFFFFF;
+background-color: #333333;
+}
+
+QLineEdit {
+background-color: #181818;
+}</string>
+  </property>
   <widget class="QLabel" name="usernameLabel">
    <property name="geometry">
     <rect>

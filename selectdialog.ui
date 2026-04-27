@@ -25,6 +25,12 @@
   <property name="windowTitle">
    <string>HTTAGEN</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+color: #FFFFFF;
+background-color: #333333;
+}</string>
+  </property>
   <widget class="QPushButton" name="decodeBtn">
    <property name="geometry">
     <rect>
@@ -57,6 +63,9 @@
      <width>481</width>
      <height>26</height>
     </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Decode</string>

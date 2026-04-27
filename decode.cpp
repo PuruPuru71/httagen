@@ -21,7 +21,6 @@ decode::~decode()
 
 void decode::on_decodeBtn_clicked()
 {
-    // This is 99% implemented for now because if hash doesn't have ":" in it, it will put the same value in both fields.
     try {
     hashstr = ui->hashField->text().toStdString();
     hashstrdec = base64::from_base64(hashstr);

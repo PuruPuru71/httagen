@@ -24,6 +24,9 @@ set(PROJECT_SOURCES
         decode.cpp
         decode.h
         decode.ui
+        httagen.ui
+        httagen.cpp
+        httagen.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -32,6 +35,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         selectdialog.h selectdialog.cpp selectdialog.ui
         decode.h decode.cpp decode.ui
+        httagen.h httagen.cpp httagen.ui
+
+
 
     )
 # Define target properties for Android with Qt 6 as:
