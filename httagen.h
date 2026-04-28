@@ -20,6 +20,8 @@ private slots:
     void on_encodeBtn_clicked();
     void on_aboutBtn_clicked();
 
+    void on_dynamicBtn_clicked();
+
 private:
     Ui::httagen *ui;
 };

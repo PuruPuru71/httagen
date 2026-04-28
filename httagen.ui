@@ -10,6 +10,18 @@
     <height>300</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>HTTAGEN</string>
   </property>
@@ -233,7 +245,7 @@ background-color: #222222;
     </widget>
    </widget>
   </widget>
-  <widget class="QPushButton" name="dynamicButton">
+  <widget class="QPushButton" name="dynamicBtn">
    <property name="geometry">
     <rect>
      <x>310</x>

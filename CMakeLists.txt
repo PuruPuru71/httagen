@@ -14,16 +14,10 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        encode.cpp
-        encode.h
-        encode.ui
         about.cpp
         about.h
         about.ui
         base64.hpp
-        decode.cpp
-        decode.h
-        decode.ui
         httagen.ui
         httagen.cpp
         httagen.h
@@ -33,8 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(httagen
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        selectdialog.h selectdialog.cpp selectdialog.ui
-        decode.h decode.cpp decode.ui
+
+
         httagen.h httagen.cpp httagen.ui
 
 
